@@ -12,14 +12,22 @@
 
 .button {
 	padding: 0.5em 0.75em;
-	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	background-color: hsl(
+		var(--accent-color-hue),
+		var(--accent-color-saturation),
+		92%
+	);
 	font-size: 18px;
 	border: none;
 	transition: background-color 0.15s ease;
 }
 
 .button:hover {
-	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%);
+	background-color: hsl(
+		var(--accent-color-hue),
+		var(--accent-color-saturation),
+		87%
+	);
 }
 
 .button:disabled {
@@ -29,7 +37,8 @@
 .steps-content {
 	margin-bottom: 30px;
 	min-height: 100px;
-	border: 2px solid hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
+	border: 2px solid
+		hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
 	border-radius: 15px;
 	padding: 15px 20px;
 }

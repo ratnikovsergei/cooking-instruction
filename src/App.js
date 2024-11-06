@@ -42,9 +42,11 @@ export const App = () => {
 						{steps.map(({ id, title }, index) => (
 							<li
 								className={
-									index <= activeIndex
+									index < activeIndex
 										? styles['steps-item'] + ' ' + styles.done
-										: styles['steps-item']
+										: index === activeIndex
+											? styles['steps-item'] + ' ' + styles.active
+											: styles['steps-item']
 								}
 								key={id}
 								index={index}
