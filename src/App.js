@@ -11,17 +11,24 @@ export const App = () => {
 			setActiveIndex(activeIndex - 1)
 		}
 	}
+
 	function moveForward() {
 		if (activeIndex < steps.length - 1) {
 			setActiveIndex(activeIndex + 1)
 		}
 	}
+
 	function moveToBegin() {
 		setActiveIndex(0)
 	}
 
 	let isItFirstStep = activeIndex === 0 ? true : false
 	let isItLastStep = activeIndex === steps.length - 1 ? true : false
+
+	// выбор нужного шага по клику
+	function setActiveStep(index) {
+		setActiveIndex(index)
+	}
 
 	return (
 		<div className={styles.container}>
@@ -40,8 +47,12 @@ export const App = () => {
 										: styles['steps-item']
 								}
 								key={id}
+								index={index}
 							>
-								<button className={styles['steps-item-button']}>
+								<button
+									className={styles['steps-item-button']}
+									onClick={() => setActiveStep(index)}
+								>
 									{index + 1}
 								</button>
 								{title}
